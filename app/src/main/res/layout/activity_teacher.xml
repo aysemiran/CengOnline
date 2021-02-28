@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal"
+        tools:context=".TeacherActivity"
+        android:focusableInTouchMode="true">
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/courseSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@+id/courseSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/nameCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <TextView
+            android:id="@+id/selectedAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+        <Button
+            android:id="@+id/addNewButton"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/custom_button"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
+
+        <ListView
+            android:id="@+id/assignList"
+            android:layout_width="382dp"
+            android:layout_height="586dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addNewButton" />
+
+        <ListView
+            android:id="@+id/mainList"
+            android:layout_width="382dp"
+            android:layout_height="586dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
+
+        <EditText
+            android:id="@+id/newNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/reg_edittext_style"
+            android:hint="Please enter the subject."
+            android:selectAllOnFocus="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameCourse" />
+
+        <EditText
+            android:id="@+id/newContextText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/reg_edittext_style"
+            android:hint="Please enter the context."
+            android:selectAllOnFocus="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newNameText" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/custom_button"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newContextText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

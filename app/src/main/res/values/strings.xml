@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EMA</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="course_spinner">"Course Spinner"</string>
+    <string-array name="coursepinner">
+        <item>Select Operation</item>
+        <item>Main</item>
+        <item>Announcements</item>
+        <item>Assignments</item>
+        <item>Stream</item>
+        <item>Message</item>
+    </string-array>
+</resources>

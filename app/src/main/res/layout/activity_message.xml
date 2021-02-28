@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            tools:context=".MessageActivity"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/typeMessageText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="56dp"
+                android:gravity="center_horizontal"
+
+                android:text="Type new message..."
+                android:textAlignment="center"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/courseSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/newMessageText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="184dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/reg_edittext_style"
+                android:hint="Please enter the message here..."
+                android:selectAllOnFocus="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/mailText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/reg_edittext_style"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/messageContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/reg_edittext_style"
+                android:selectAllOnFocus="true"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="288dp"
+                android:background="@drawable/custom_button"
+                android:text="Go back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.152"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMessageText"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/sendMessageButton"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="288dp"
+                android:background="@drawable/custom_button"
+                android:text="SEND"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newMessageText"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/newMessageButton"
+                android:layout_width="224dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="696dp"
+                android:background="@drawable/custom_button"
+                android:text="New Message"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:textSize="30sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ListView
+                android:id="@+id/messagesList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="76dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.781"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            tools:context=".EditDeleteTeacherActivityActivity">
+
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                app:layout_constraintTop_toBottomOf="@+id/backButton"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="168dp"
+                android:background="@color/Violet"
+                android:text="EDIT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.114"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editNameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="144dp"
+                android:background="@drawable/reg_edittext_style"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.843"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editContext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/reg_edittext_style"
+                android:selectAllOnFocus="true"
+                android:text=""
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editNameText" />
+
+            <Button
+                android:id="@+id/editTheTextButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:text="EDIT"
+                android:background="@drawable/custom_button"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:visibility="invisible"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editContext" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="168dp"
+                android:background="@color/LightBlue"
+                android:text="DELETE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.846"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/seeUploadedAssignments"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="236dp"
+                android:background="@drawable/custom_button"
+                android:text="See the works"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:id="@+id/uploadedAssignList"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="292dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

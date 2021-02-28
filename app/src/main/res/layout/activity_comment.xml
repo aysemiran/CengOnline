@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            tools:context=".CommentActivity">
+
+            <TextView
+                android:id="@+id/selectedPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="7dp" />
+
+            <EditText
+                android:id="@+id/newCommentText"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="124dp"
+                android:background="@drawable/reg_edittext_style"
+                android:hint="type something..."
+                android:textAlignment="center"
+                android:selectAllOnFocus="true"
+                android:gravity="center_horizontal"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/addCommentButton"
+                android:layout_width="90dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="124dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/custom_button"
+                android:text="SEND"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorHighlight="#95675E5E"
+                android:textColorLink="#C370ED"
+                android:textSize="20dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintStart_toEndOf="@+id/newCommentText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ListView
+                android:id="@+id/commentList"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="180dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp"
+                android:textColor="@color/midnightblue"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

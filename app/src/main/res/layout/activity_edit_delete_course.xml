@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        tools:context=".EditDeleteCourseActivity">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"/>
+
+        <ListView
+            android:id="@+id/courseListEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="539dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backCoursePage" />
+
+        <TextView
+            android:id="@+id/coursePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Choose the Course for Your Operation"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/selectedCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/backCoursePage" />
+
+        <EditText
+            android:id="@+id/editCourseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:hint="Edit Course Name"
+            app:layout_constraintTop_toBottomOf="@+id/selectedCourse"/>
+
+        <EditText
+            android:id="@+id/editNumStudents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:hint="Edit Number of Students Taken"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseName"/>
+
+
+        <Button
+            android:id="@+id/editCourse"
+            android:background="@drawable/custombutton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="20sp"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:visibility="invisible"
+            android:text="EDIT"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNumStudents" />
+
+        <Button
+            android:id="@+id/deleteCourse"
+            android:background="@drawable/custombutton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="20sp"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp"
+            android:text="DELETE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editNumStudents" />
+
+        <Button
+            android:id="@+id/backCoursePage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:background="@color/CornflowerBlue"
+            android:layout_marginTop="15dp"
+            android:text="BACK TO COURSE PAGE"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coursePage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

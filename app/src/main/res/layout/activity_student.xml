@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal"
+        android:focusableInTouchMode="true"
+        tools:context=".StudentActivity">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/courseSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@+id/courseSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nameCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <TextView
+            android:id="@+id/selectedAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+        <TextView
+            android:id="@+id/submitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="Not submitted yet.."
+            android:textAlignment="center"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/selectedAssignment"
+            tools:layout_editor_absoluteX="128dp"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/uploadNewAssignment"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="UPLOAD YOUR WORK"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submitText"
+            app:layout_constraintVertical_bias="0.256" />
+
+        <EditText
+            android:id="@+id/newAssignmentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/reg_edittext_style"
+            android:hint="Please submit your assignment here."
+            android:selectAllOnFocus="true"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selectedAssignment" />
+
+        <Button
+            android:id="@+id/sendAssignButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="64dp"
+            android:text="SUBMIT"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorHighlight="#95675E5E"
+            android:textColorLink="#C370ED"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.578"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newAssignmentText"
+            app:layout_constraintVertical_bias="0.198" />
+
+        <ListView
+            android:id="@+id/assignList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/mainList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
